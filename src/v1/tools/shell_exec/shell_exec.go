@@ -4,14 +4,13 @@ import "os/exec"
 
 func main() {
 	app := "echo"
-	//app := "buah"
+	arg := []string{"-e", "Hi Raj!!"}
+	printAndExecCommand(app, arg...)
+}
 
-	arg0 := "-e"
-	arg1 := "Hello world"
-	arg2 := "\n\tfrom"
-	arg3 := "golang"
+func printAndExecCommand(app string, args ...string) {
 
-	cmd := exec.Command(app, arg0, arg1, arg2, arg3)
+	cmd := exec.Command(app, args...)
 	stdout, err := cmd.Output()
 
 	if err != nil {
@@ -20,4 +19,5 @@ func main() {
 	}
 
 	print(string(stdout))
+
 }
