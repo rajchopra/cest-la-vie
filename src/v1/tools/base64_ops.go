@@ -30,5 +30,5 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/encode/{str}", EncodeString).Methods("GET")
 	router.HandleFunc("/decode/{str}", DecodeString).Methods("GET")
-	log.Fatal(http.ListenAndServe(":2211", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
