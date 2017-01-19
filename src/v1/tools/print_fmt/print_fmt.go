@@ -18,44 +18,56 @@ func main() {
 	// an instance of our `gatsby` struct.
 	p := gatsby{22, 11}
 	fmt.Printf("%v\n", p)
+	// {22 11}
 
 	// If the value is a struct, the `%+v` variant will
 	// include the struct's field names.
 	fmt.Printf("%+v\n", p)
+	// {valOne:22 valTwo:11}
 
 	// The `%#v` variant prints a Go syntax representation
 	// of the value, i.e. the source code snippet that
 	// would produce that value.
 	fmt.Printf("%#v\n", p)
+	// main.gatsby{valOne: 22, valTwo: 11}
 
 	// To print the type of a value, use `%T`.
 	fmt.Printf("%T\n", p)
+	// main.gatsby
 
 	// Formatting booleans is straight-forward.
 	fmt.Printf("%t\n", true)
+	// true
 
 	// There are many options for formatting integers.
 	// Use `%d` for standard, base-10 formatting.
 	fmt.Printf("%d\n", 123)
+	// 123
 
 	// This prints a binary representation.
 	fmt.Printf("%b\n", 14)
+	// 1110
 
 	// This prints the character corresponding to the
 	// given integer.
 	fmt.Printf("%c\n", 33)
+	// !
 
 	// `%x` provides hex encoding.
 	fmt.Printf("%x\n", 456)
+	// 1c8
 
 	// There are also several formatting options for
 	// floats. For basic decimal formatting use `%f`.
 	fmt.Printf("%f\n", 78.9)
+	// 78.900000
 
 	// `%e` and `%E` format the float in (slightly
 	// different versions of) scientific notation.
 	fmt.Printf("%e\n", 123400000.0)
 	fmt.Printf("%E\n", 123400000.0)
+	// 1.234000e+08
+	// 1.234000E+08
 
 	// For basic string printing use `%s`.
 	fmt.Printf("%s\n", "Raj Vimal Chopra")
