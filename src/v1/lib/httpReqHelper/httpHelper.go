@@ -1,28 +1,31 @@
 package main
 
-import (
-	"net/http"
-	"strings"
-	"io/ioutil"
+ import (
+ 	"fmt"
+ 	"io/ioutil"
+ 	"net/http"
+ 	"os"
+ )
 
-)
+ func main() {
 
-func main() {
+ 	resp, err := http.Get("http://ifconfig.co")
 
-	reader := strings.NewReader(`{"body":123}`)
-	request, err := http.NewRequest("GET", "http://ifconfig.co", reader)
-	client := &http.Client{}
-	resp, err := client.Do(request)
+ 	if err != nil {
+ 		fmt.Println(err)
+ 		os.Exit(1)
+ 	}
 
-	if err != nil {
-		println(err.Error())
-	}
+ 	defer resp.Body.Close()
 
-	// print(resp.Body)
-	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
-	println(body)
+ 	htmlData, err := ioutil.ReadAll(resp.Body)
+
+ 	if err != nil {
+ 		fmt.Println(err)
+ 		os.Exit(1)
+ 	}
+
+ 	fmt.Println("My IP is : ", string(htmlData))
 
 
-
-}
+ }
