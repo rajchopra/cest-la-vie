@@ -17,7 +17,9 @@ func SumProductDiff(i, j int) (int, int, int) {
 	return i + j, i * j, i - j
 }
 
-// max : the function returns 2 `int`s. Max number as first int.
+// max : the function returns 2 `int`s.
+// Max number as first int.
+// Min number as second int.
 func max(num1, num2 int) (int, int) {
 	if num1 > num2 {
 		return num1, num2
