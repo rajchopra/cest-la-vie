@@ -17,6 +17,15 @@ func SumProductDiff(i, j int) (int, int, int) {
 	return i + j, i * j, i - j
 }
 
+// max : the function returns 2 `int`s. Max number as first int.
+func max(num1, num2 int) (int, int) {
+	if num1 > num2 {
+		return num1, num2
+	} else {
+		return num2, num1
+	}
+}
+
 func main() {
 
 	// Here we use the 2 different return values from the
@@ -32,5 +41,9 @@ func main() {
 
 	sum, prod, diff := SumProductDiff(3, 4)
 	fmt.Println("Sum:", sum, "| Product:", prod, "| Diff:", diff)
+
+	var a1 int = 150
+	var a2 int = 130
+	func(i ...int) { fmt.Printf("Max val: %d Min val: %d\n", i[0], i[1]) }(max(a1, a2))
 
 }
