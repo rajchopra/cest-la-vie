@@ -12,6 +12,11 @@ func vals() (int, int) {
 	return 3, 7
 }
 
+// SumProductDiff : the function returns 3 `int`s.
+func SumProductDiff(i, j int) (int, int, int) {
+	return i + j, i * j, i - j
+}
+
 func main() {
 
 	// Here we use the 2 different return values from the
@@ -24,4 +29,8 @@ func main() {
 	// use the blank identifier `_`.
 	_, c := vals()
 	fmt.Println(c)
+
+	sum, prod, diff := SumProductDiff(3, 4)
+	fmt.Println("Sum:", sum, "| Product:", prod, "| Diff:", diff)
+
 }
