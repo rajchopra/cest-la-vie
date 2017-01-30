@@ -10,7 +10,6 @@ var countryTz = map[string]string{
 	"Almaty":        "Asia/Almaty",
 	"Amman":         "Asia/Amman",
 	"Anadyr":        "Asia/Anadyr",
-	"Aqtau":         "Asia/Aqtau",
 	"Aqtobe":        "Asia/Aqtobe",
 	"Ashgabat":      "Asia/Ashgabat",
 	"Atyrau":        "Asia/Atyrau",
@@ -81,7 +80,6 @@ var countryTz = map[string]string{
 	"Tomsk":         "Asia/Tomsk",
 	"Ulaanbaatar":   "Asia/Ulaanbaatar",
 	"Urumqi":        "Asia/Urumqi",
-	"Nera":          "Ust-Nera",
 	"Vientiane":     "Asia/Vientiane",
 	"Vladivostok":   "Asia/Vladivostok",
 	"Yakutsk":       "Asia/Yakutsk",
@@ -99,38 +97,38 @@ func timeIn(name string) time.Time {
 }
 
 func main() {
-	utc := time.Now().UTC().Format("15:04")
-	hun := timeIn("Hungary").Format("15:04")
-	eg := timeIn("Egypt").Format("15:04")
-	ade := timeIn("Aden").Format("22:11")
-	alm := timeIn("Almaty").Format("22:11")
-	amm := timeIn("Amman").Format("22:11")
-	ana := timeIn("Anadyr").Format("22:11")
-	aqt := timeIn("Aqtau").Format("22:11")
-	aqt := timeIn("Aqtobe").Format("22:11")
-	ash := timeIn("Ashgabat").Format("22:11")
-	bag := timeIn("Baghdad").Format("22:11")
-	bah := timeIn("Bahrain").Format("22:11")
-	bak := timeIn("Baku").Format("22:11")
-	bar := timeIn("Barnaul").Format("22:11")
-	bru := timeIn("Brunei").Format("22:11")
-	cho := timeIn("Choibalsan").Format("22:11")
-	pon := timeIn("Pontianak").Format("22:11")
-	sak := timeIn("Sakhalin").Format("22:11")
-	sam := timeIn("Samarkand").Format("22:11")
-	sin := timeIn("Singapore").Format("22:11")
-	sre := timeIn("Srednekolymsk").Format("22:11")
-	tas := timeIn("Tashkent").Format("22:11")
-	tbi := timeIn("Tbilisi").Format("22:11")
-	teh := timeIn("Tehran").Format("22:11")
-	tok := timeIn("Tokyo").Format("22:11")
-	ula := timeIn("Ulaanbaatar").Format("22:11")
-	uru := timeIn("Urumqi").Format("22:11")
-	ner := timeIn("Nera").Format("22:11")
-	vie := timeIn("Vientiane").Format("22:11")
-	vla := timeIn("Vladivostok").Format("22:11")
-	yan := timeIn("Yangon").Format("22:11")
-	yek := timeIn("Yekaterinburg").Format("22:11")
-	yer := timeIn("Yerevan").Format("22:11")
-	fmt.Println(utc, hun, eg)
+	utc := fmt.Sprintf("UTC :: %s", time.Now().UTC().Format("15:04:05"))
+	hun := fmt.Sprintf("Hungary :: %s", timeIn("Hungary").Format("15:04:05"))
+	eg := fmt.Sprintf("Egypt :: %s", timeIn("Egypt").Format("15:04:05"))
+	ade := fmt.Sprintf("Aden :: %s", timeIn("Aden").Format("15:04:05"))
+	alm := fmt.Sprintf("Almaty :: %s", timeIn("Almaty").Format("15:04:05"))
+	amm := fmt.Sprintf("Amman :: %s", timeIn("Amman").Format("15:04:05"))
+	ana := fmt.Sprintf("Anadyr :: %s", timeIn("Anadyr").Format("15:04:05"))
+	aqt := fmt.Sprintf("Aqtobe :: %s", timeIn("Aqtobe").Format("15:04:05"))
+	ash := fmt.Sprintf("Ashgabat :: %s", timeIn("Ashgabat").Format("15:04:05"))
+	bag := fmt.Sprintf("Baghdad :: %s", timeIn("Baghdad").Format("15:04:05"))
+	bah := fmt.Sprintf("Bahrain :: %s", timeIn("Bahrain").Format("15:04:05"))
+	bak := fmt.Sprintf("Baku :: %s", timeIn("Baku").Format("15:04:05"))
+	bar := fmt.Sprintf("Barnaul :: %s", timeIn("Barnaul").Format("15:04:05"))
+	bru := fmt.Sprintf("Brunei :: %s", timeIn("Brunei").Format("15:04:05"))
+	cho := fmt.Sprintf("Choibalsan :: %s", timeIn("Choibalsan").Format("15:04:05"))
+	kol := fmt.Sprintf("Kolkata :: %s", timeIn("Kolkata").Format("15:04:05"))
+	pon := fmt.Sprintf("Pontianak :: %s", timeIn("Pontianak").Format("15:04:05"))
+	sak := fmt.Sprintf("Sakhalin :: %s", timeIn("Sakhalin").Format("15:04:05"))
+	sam := fmt.Sprintf("Samarkand :: %s", timeIn("Samarkand").Format("15:04:05"))
+	sin := fmt.Sprintf("Singapore :: %s", timeIn("Singapore").Format("15:04:05"))
+	sre := fmt.Sprintf("Srednekolymsk :: %s", timeIn("Srednekolymsk").Format("15:04:05"))
+	tas := fmt.Sprintf("Tashkent :: %s", timeIn("Tashkent").Format("15:04:05"))
+	tbi := fmt.Sprintf("Tbilisi :: %s", timeIn("Tbilisi").Format("15:04:05"))
+	teh := fmt.Sprintf("Tehran :: %s", timeIn("Tehran").Format("15:04:05"))
+	tok := fmt.Sprintf("Tokyo :: %s", timeIn("Tokyo").Format("15:04:05"))
+	ula := fmt.Sprintf("Ulaanbaatar :: %s", timeIn("Ulaanbaatar").Format("15:04:05"))
+	uru := fmt.Sprintf("Urumqi :: %s", timeIn("Urumqi").Format("15:04:05"))
+	vie := fmt.Sprintf("Vientiane :: %s", timeIn("Vientiane").Format("15:04:05"))
+	vla := fmt.Sprintf("Vladivostok :: %s", timeIn("Vladivostok").Format("15:04:05"))
+	yan := fmt.Sprintf("Yangon :: %s", timeIn("Yangon").Format("15:04:05"))
+	yek := fmt.Sprintf("Yekaterinburg :: %s", timeIn("Yekaterinburg").Format("15:04:05"))
+	yer := fmt.Sprintf("Yerevan :: %s", timeIn("Yerevan").Format("15:04:05"))
+	fmt.Println("\n", utc, "\n", kol)
+	fmt.Println("\n", ade, "\n", alm, "\n", amm, "\n", ana, "\n", aqt, "\n", aqt, "\n", ash, "\n", bag, "\n", bah, "\n", bak, "\n", bar, "\n", bru, "\n", cho, "\n", eg, "\n", hun, "\n", pon, "\n", sak, "\n", sam, "\n", sin, "\n", sre, "\n", tas, "\n", tbi, "\n", teh, "\n", tok, "\n", ula, "\n", uru, "\n", vie, "\n", vla, "\n", yan, "\n", yek, "\n", yer)
 }
