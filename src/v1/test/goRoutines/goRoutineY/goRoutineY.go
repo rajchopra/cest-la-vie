@@ -10,9 +10,9 @@ import (
 )
 
 func f(from string, duration time.Duration) {
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 200; i++ {
 		fmt.Println(from, ":", i)
-		time.Sleep(duration * time.Millisecond)
+		time.Sleep(duration * time.Microsecond)
 	}
 }
 
