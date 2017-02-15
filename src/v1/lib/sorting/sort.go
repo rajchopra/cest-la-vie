@@ -14,16 +14,26 @@ func main() {
 	// in-place, so it changes the given slice and doesn't
 	// return a new one.
 	strs := []string{"c", "a", "b"}
+	fmt.Println("Before sorting: Strings:", strs)
 	sort.Strings(strs)
-	fmt.Println("Strings:", strs)
+	fmt.Println("\nAfter sorting: Strings:", strs)
+
+	// check if String slice is in sorted order.
+	s := sort.StringsAreSorted(strs)
+	fmt.Println("String Sorted: ", s)
 
 	// An example of sorting `int`s.
 	ints := []int{7, 2, 4}
-	sort.Ints(ints)
-	fmt.Println("Ints:   ", ints)
+	fmt.Println("\n\nBefore sorting: Ints:   ", ints)
+	// check if int slice is in sorted order.
+	s = sort.IntsAreSorted(ints)
+	fmt.Println("Ints Sorted: ", s)
 
-	// We can also use `sort` to check if a slice is
-	// already in sorted order.
-	s := sort.IntsAreSorted(ints)
-	fmt.Println("Sorted: ", s)
+	sort.Ints(ints)
+	fmt.Println("\nAfter sorting: Ints:   ", ints)
+
+	// check again if int slice is in sorted order.
+	s = sort.IntsAreSorted(ints)
+	fmt.Println("Ints Sorted: ", s)
+
 }
