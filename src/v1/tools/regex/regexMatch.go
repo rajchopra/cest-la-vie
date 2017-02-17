@@ -14,6 +14,9 @@ func main() {
 	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
 	fmt.Println(match)
 
+	match, _ = regexp.MatchString("r([a-z]+)jan", "rajan")
+	fmt.Println(match)
+
 	// Above we used a string pattern directly, but for
 	// other regexp tasks you'll need to `Compile` an
 	// optimized `Regexp` struct.
